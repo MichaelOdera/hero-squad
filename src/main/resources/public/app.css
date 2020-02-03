@@ -1,0 +1,38 @@
+button{
+    color: black;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+a{
+ text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+
+form{
+    padding: 3%;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+
+.btn-info{
+    color: white;
+}
+
+.heroshow{
+    padding: 2%;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.fas{
+    font-size: 100px;
+}
+
