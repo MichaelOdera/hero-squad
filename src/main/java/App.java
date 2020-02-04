@@ -34,9 +34,35 @@ public class App{
         get("/", (request,response)->{
             Map<String, Object> model = new HashMap<>();
             ArrayList<Hero> heros = Hero.getAllHeros();
+            ArrayList<Squad> squads = Squad.getAllInstances();
             model.put("heros", heros);
+            model.put("squads", squads);
+            String name = request.queryParams("name");
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+            Integer age = Integer.parseInt(request.queryParams("age"));
+            String squadName = request.queryParams("squad");
+            Hero newHero = new Hero(name, age, power, weakness, squadName);
+            model.put("newHero", newHero);
+            if(newHero.getSquadName().equals("Anti-Sexism")){
+                Squad aSexSquad = new Squad(newHero);
+                model.put("aSexSquad", aSexSquad);
+            }else if(newHero.getSquadName().equals("Computer-illiteracy")){
+                Squad compSquad = new Squad(newHero);
+                model.put("compSquad", compSquad);
+            }else if(newHero.getSquadName().equals("Mouth-Ethics")){
+                Squad ethicSquad = new Squad(newHero);
+                model.put("ethicSquad", ethicSquad);
+            }else if(newHero.getSquadName().equals("Anti-Hogging-bus-seats")){
+                Squad busSquad = new Squad(newHero);
+                model.put("busSquad", busSquad);
+            }else{
+                Squad passiveSquad = new Squad(newHero);
+                model.put("passiveSquad", passiveSquad);
+            }
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+
 
         get("heros/:id", (request, response)->{
             Map<String, Object> model = new HashMap<>();
