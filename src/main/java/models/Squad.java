@@ -9,6 +9,7 @@ public class Squad {
     private int strength;
     private String squadName;
     private static ArrayList<Squad> instances = new ArrayList<>();
+    private int size;
 
 
 
@@ -17,6 +18,7 @@ public class Squad {
         this.total = 0;
         this.strength = getPowerMagnitude();
         this.squadName = getSquadName();
+        this.size = getAllInstances().size();
         instances.add(this);
 
     }

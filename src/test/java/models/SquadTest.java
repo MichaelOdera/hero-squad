@@ -55,5 +55,14 @@ public class SquadTest {
         assertEquals("hurry", testSquad.getSquadName());
     }
 
+    @Test
+    public void returnInstanceValue_2(){
+        Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
+        Hero secondHero = new Hero("forty", 60, "tall", "lanky", "pawns");
+        Squad secondSquad = new Squad(secondHero);
+        Squad testSquad = new Squad(testHero);
+        assertEquals(2, Squad.getAllInstances().size());
+    }
+
 
 }

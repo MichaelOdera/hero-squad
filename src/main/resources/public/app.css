@@ -73,6 +73,12 @@ input[type=text]{
     color: black;
 }
 
-
+#squads{
+    color:#EEEDE7;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.5);
+}
 
 

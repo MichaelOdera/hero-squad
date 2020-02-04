@@ -57,14 +57,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <h3>THE SQUADS</h3>
+
+        <div class="col-md-6" id="squads">
             {{#if squads}}
+                <h3>THE SQUADS</h3>
                 {{#each squads}}
                     <h4>Name of the squad: {{squadName}}</h4>
-                    <h4>The strength of Squad: {{strength}}</h4>
                 {{/each}}
             {{/if}}
+
 
         </div>
 
