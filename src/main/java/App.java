@@ -28,21 +28,6 @@ public class App{
             Integer age = Integer.parseInt(request.queryParams("age"));
             String squadName = request.queryParams("squad");
             Hero newHero = new Hero(name, age, power, weakness, squadName);
-            return new ModelAndView(model, "success.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/", (request,response)->{
-            Map<String, Object> model = new HashMap<>();
-            ArrayList<Hero> heros = Hero.getAllHeros();
-            ArrayList<Squad> squads = Squad.getAllInstances();
-            model.put("heros", heros);
-            model.put("squads", squads);
-            String name = request.queryParams("name");
-            String power = request.queryParams("power");
-            String weakness = request.queryParams("weakness");
-            Integer age = Integer.parseInt(request.queryParams("age"));
-            String squadName = request.queryParams("squad");
-            Hero newHero = new Hero(name, age, power, weakness, squadName);
             model.put("newHero", newHero);
             if(newHero.getSquadName().equals("Anti-Sexism")){
                 Squad aSexSquad = new Squad(newHero);
@@ -60,6 +45,15 @@ public class App{
                 Squad passiveSquad = new Squad(newHero);
                 model.put("passiveSquad", passiveSquad);
             }
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/", (request,response)->{
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> heros = Hero.getAllHeros();
+            ArrayList<Squad> squads = Squad.getAllInstances();
+            model.put("heros", heros);
+            model.put("squads", squads);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
