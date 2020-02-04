@@ -96,6 +96,8 @@ public class HeroTest {
         assertEquals(1, testHero.getId());
     }
 
+
+
     //END OF TESTS TO CHECK FOR CREATION AND READING OF INSERTED ITEMS
 
 
