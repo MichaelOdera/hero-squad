@@ -16,9 +16,19 @@
                     <input type="text" name="weakness" id="weakness"><br>
 
                     <label for="age">Enter age:</label><br>
-                    <input type="number" name="age" id="age">
+                    <input type="number" name="age" id="age"><br>
 
-                    <button type="submit" class="btn btn-info" >CREATE HERO</button>
+                    <label for="squad">CHOOSE SQUAD</label><br>
+                    <input type = "text" list = "squad" name="squad">
+                    <datalist id = "squad">
+                        <option value = "Anti-sexism">
+                        <option value = "Computer-illiteracy">
+                        <option value = "Mouth-Ethics">
+                        <option value = "Anti-Hogging-bus-seats">
+                        <option value = "Anti-passive-aggressive">
+                    </datalist>
+
+                    <button type="submit" class="btn-info" >ADD HERO</button>
                 </form>
 
 
@@ -29,10 +39,12 @@
             {{#if heros}}
                {{#each heros}}
                    <div class="heroshow">
-                       <h3>Hero Name: {{name}}</h3>
+                       <h3><i class="fas fa-swords"></i>Hero Name: {{name}}</h3><hr>
                        <h4>Hero Power: {{power}} :Rating: {{powerMagnitude}}</h4>
                        <h4>Hero Weakness: {{weakness}}: Rating: {{weaknessMagnitude}}</h4>
                        <h5>Age: {{age}}</h5>
+                       <h5>Squad: {{squadName}}</h5>
+                       <p><a href="/heros/{{id}}" style="color:red;">See More</a></p>
                    </div>
 
                 {{/each}}
