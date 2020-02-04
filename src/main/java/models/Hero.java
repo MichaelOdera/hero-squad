@@ -20,7 +20,7 @@ public class Hero {
 
 
 
-    public Hero(String name, int age, String power, String weakness, String squadName){
+    public Hero(String name, Integer age, String power, String weakness, String squadName){
         this.name = name;
         this.power = power;
         this.weakness = weakness;
