@@ -3,15 +3,25 @@ package models;
 import java.util.ArrayList;
 
 public class Squad {
-    private Hero hero;
+    private static int total;
+    private static int squadStrength;
+    private static Hero hero;
+    private String squadName;
     private static ArrayList<Squad> instances = new ArrayList<>();
 
 
 
     public Squad(Hero hero){
         this.hero = hero;
+        this.total = 0;
+        this.squadStrength = getSquadStrength();
+        this.squadName = getSquadName();
         instances.add(this);
 
+    }
+
+    public static int getSquadStrength() {
+        return total += hero.getPowerMagnitude();
     }
 
 
@@ -44,4 +54,6 @@ public class Squad {
     public String getSquadName() {
         return hero.getSquadName();
     }
+
+
 }
