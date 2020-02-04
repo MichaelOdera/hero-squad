@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class SquadTest {
@@ -50,5 +52,15 @@ public class SquadTest {
         Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
         Squad testSquad = new Squad(testHero);
         assertEquals("hurry", testSquad.getSquadName());
+    }
+
+    @Test
+    public void checkIfReturnsTotalStrength_10(){
+        Hero testHero = new Hero("cow", 12,"bonus", "slip", "skiers");
+        Hero secondHero = new Hero("cat", 23, "bonus", "sleepy","conan");
+        ArrayList<Squad> squads = new ArrayList<>();
+        Squad testSquad = new Squad(testHero);
+        Squad secondSquad = new Squad(secondHero);
+        assertEquals(10, Squad.getSquadStrength());
     }
 }
