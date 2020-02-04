@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static models.Squad.getSquadStrength;
 import static org.junit.Assert.*;
 
 public class SquadTest {
@@ -54,13 +55,5 @@ public class SquadTest {
         assertEquals("hurry", testSquad.getSquadName());
     }
 
-    @Test
-    public void checkIfReturnsTotalStrength_10(){
-        Hero testHero = new Hero("cow", 12,"bonus", "slip", "skiers");
-        Hero secondHero = new Hero("cat", 23, "bonus", "sleepy","conan");
-        ArrayList<Squad> squads = new ArrayList<>();
-        Squad testSquad = new Squad(testHero);
-        Squad secondSquad = new Squad(secondHero);
-        assertEquals(10, Squad.getSquadStrength());
-    }
+
 }
