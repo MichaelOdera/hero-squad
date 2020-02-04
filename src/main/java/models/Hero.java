@@ -9,27 +9,36 @@ public class Hero {
     private String name;
     private String power;
     private String weakness;
+    private String squadName;
     private static ArrayList<Hero> allheros = new ArrayList<>();
     private boolean populatefirst;
     private int powerMagnitude;
     private int weaknessMagnitude;
     private int age;
+    private int id;
 
 
 
-    public Hero(String name, int age, String power, String weakness){
+
+    public Hero(String name, int age, String power, String weakness, String squadName){
         this.name = name;
         this.power = power;
         this.weakness = weakness;
         this.populatefirst = false;
         this.age = age;
+        this.squadName = squadName;
         this.powerMagnitude = getPowerMagnitude();
         this.weaknessMagnitude = getWeaknessMagnitude();
         this.dayCreated = LocalDateTime.now();
         allheros.add(this);
+        this.id = allheros.size();
 
     }
 
+    //Find  a hero by a particular id
+    public static Hero findById(int id) {
+        return allheros.get(id-1);
+    }
 
 
     public LocalDateTime getDayCreated(){
@@ -45,6 +54,10 @@ public class Hero {
         this.age = age;
     }
 
+    //get the id of a particular post
+    public int getId() {
+        return id;
+    }
     public static void clearAllHeros() {
         allheros.clear();
     }
@@ -92,6 +105,8 @@ public class Hero {
         return this.populatefirst;
     }
 
+
+    //function to calculate magnitude of hero's property
     public int getPowerMagnitude(){
 
         return power.length();
@@ -99,5 +114,22 @@ public class Hero {
 
     public int getWeaknessMagnitude(){
         return weakness.length();
+    }
+
+    //getters and setters for a squad name
+    public String getSquadName() {
+        return squadName;
+    }
+
+    public void setSquadName(String squadName) {
+        this.squadName = squadName;
+    }
+
+    public void update(String name,int age, String power, String weakness, String squad) {
+        this.name = name;
+        this.age = age;
+        this.power = power;
+        this.squadName = squad;
+        this.weakness = weakness;
     }
 }
