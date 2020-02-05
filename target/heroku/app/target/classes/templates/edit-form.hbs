@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div class="edit">
+            <h1>Edit this Hero!</h1>
+        <form action="/heros/{{editHero.id}}/update" method="post">
+            <label for="name">Edit name</label><br>
+            <input id="name" name="name" type="text" value="{{editHero.name}}"><br>
+
+            <label for="power">Edit power</label><br>
+            <input id="power" name="power" type="text" value="{{editHero.power}}"><br>
+
+            <label for="weakness">Edit weakness</label><br>
+            <input id="weakness" name="weakness" type="text" value="{{editHero.weakness}}"><br>
+
+            <label for="name">Edit age</label><br>
+            <input id="name" name="age" type="number" value="{{editHero.age}}"><br>
+
+            <label for="squad">EDIT SQUAD</label><br>
+            <input type = "text" list = "squad" name="squad" value="{{editHero.squad}}">
+            <datalist id = "squad">
+                <option value = "Anti-sexism">
+                <option value = "Computer-illiteracy">
+                <option value = "Mouth-Ethics">
+                <option value = "Anti-Hogging-bus-seats">
+                <option value = "Anti-passive-aggressive">
+            </datalist>
+
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </form>
+    </div>
+{{/partial}}
+
+
+
+{{> layout.hbs}}
