@@ -52,6 +52,8 @@ public class App{
             ArrayList<Squad> squads = Squad.getAllInstances();
             model.put("heros", heros);
             model.put("squads", squads);
+            System.out.println("-----------------------------------------------------");
+            System.out.println(squads);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 

@@ -30,7 +30,31 @@
 
                     <button type="submit" class="btn-info" >ADD HERO</button>
                 </form>
+            <div class="col-md-12" id="squads">
+                <div>
+                    {{#if newSquad}}
+                        <p>Power: {{newSquad.strenth}}</p>
+                        <p>Member No: {{newSquad.size}}</p>
+                    {{/if}}
 
+                    {{#if squads}}
+                        <h3>THE SQUADS</h3>
+                        {{#each squads}}
+                            <div class="squadding">
+                                <h4>Name of the squad: {{squadName}}</h4>
+                                <h4>Strength: {{strength}}</h4>
+                                {{#if newSquad}}
+                                    <h4>Member: {{newSquad.getPowerMagnitude}}</h4>
+                                {{/if}}
+
+                            </div><hr>
+                        {{/each}}
+
+
+                    {{/if}}
+                </div>
+
+            </div>
 
         </div>
 
@@ -55,31 +79,10 @@
             {{/if}}
 
         </div>
-    </div>
-    <div class="row">
 
-        <div class="col-md-6" id="squads">
-            <div>
-                {{#if newSquad}}
-                    <p>Power: {{newSquad.strenth}}</p>
-                    <p>Member No: {{newSquad.size}}</p>
-                {{/if}}
-
-                {{#if squads}}
-                    <h3>THE SQUADS</h3>
-                    {{#each squads}}
-                        <h4>Name of the squad: {{squadName}}</h4>
-                        <h4>Power of Squad: {{strength}}</h4>
-
-                    {{/each}}
-
-
-                {{/if}}
-            </div>
-
-        </div>
 
     </div>
+
 
 {{/partial}}
 
