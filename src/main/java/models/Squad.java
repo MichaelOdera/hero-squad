@@ -3,8 +3,6 @@ package models;
 import java.util.ArrayList;
 
 public class Squad {
-    private static int total = 0;
-    private static int squadStrength;
     private Hero hero;
     private int strength;
     private String squadName;
@@ -16,7 +14,6 @@ public class Squad {
 
     public Squad(Hero hero){
         this.hero = hero;
-        this.squadStrength = getSquadStrength();
         this.strength = getPowerMagnitude();
         this.squadName = getSquadName();
         this.size = getAllInstances().size();
@@ -28,11 +25,9 @@ public class Squad {
     public String getHeroname() {
         return heroname;
     }
-    public static int getSquadStrength() {
-        return total+instances.size();
-    }
 
-    public static void clearAllinstances() {
+    public static void clearAllinstances()
+    {
         instances.clear();
     }
 
@@ -56,17 +51,13 @@ public class Squad {
     }
 
 
-    public int getAge() {
-        return hero.getAge();
-    }
-
 
     public int getStrength() {
         return strength;
     }
 
     public int getPowerMagnitude() {
-        return hero.getPowerMagnitude();
+        return hero.getPowerMagnitude() + 5;
     }
 
     public String getSquadName() {

@@ -39,10 +39,8 @@ public class App{
 
             Hero newHero = new Hero(name, age, power, weakness, squadName);
             Squad newSquad = new Squad(newHero);
-
             model.put("squadName", request.session().attribute("squadName"));
-            model.put("newHero", newHero);
-            model.put("newSquad", newSquad);
+
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
