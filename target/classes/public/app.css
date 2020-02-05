@@ -1,0 +1,163 @@
+body{
+  background-image: url("https://i.pinimg.com/236x/06/da/f9/06daf9e4f0825a5caf70f2eb164521c3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #7E5333;
+}
+ul{
+  background-color: black;
+  color: white;
+}
+
+ul li a:hover{
+    color:black;
+}
+
+.container{
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 3%;
+  border-radius: 12px;
+}
+button{
+    color: black;
+}
+
+a{
+ text-decoration: none;
+}
+
+
+
+form{
+    padding: 3%;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+
+.btn-info{
+    color: white;
+}
+
+.heroshow{
+    padding: 2%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: #E9EBF0;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.fas{
+    font-size: 100px;
+}
+
+.detail p{
+ color:#D5B794;
+}
+
+.detail h5{
+  text-decoration: underline;
+}
+
+.detail{
+    background-color: black;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 30px;
+    padding: 2%;
+}
+
+
+input[type=text]{
+    color: black;
+}
+
+#squads{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.squadding{
+    color:#EEEDE7;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 2%;
+}
+
+.squadding h4{
+    background-color: #4F0000;
+    color: #D9CED6;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.intro{
+    color: #B9B7BD;
+}
+
+#success{
+    color: #7E5333;
+    background-image: url("https://i.pinimg.com/236x/17/69/c9/1769c9d548e4c4eee2eb950a537bf6b4.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 5%;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#success h4{
+    color: white;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.loader{
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #7E5333;
+    border-bottom: 16px solid #7E5333;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinners{
+    display: flex;
+    justify-content: space-between;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+
+}
+
+

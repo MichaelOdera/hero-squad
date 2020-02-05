@@ -1,0 +1,85 @@
+{{#partial "content"}}
+    <div class="row">
+        <div class="col-md-6">
+            <i class="fas fa-jedi text-center" style="font-size: 60px;"></i>
+            <h1>Enter a hero you like hero you like</h1>
+            <h5 class="intro">NOTE: The length of name of the power or weakness is assigned a corresponding value. <b>eg(strong: 6 or weak:4)</b></h5>
+
+                <form action="/heros/new/" method="post">
+                    <label for="name">Enter the heros Name: </label><br>
+                    <input type="text", id="name" name="name" class="form-control"><br>
+
+                    <label for="power">Choose the Hero You want</label><br>
+                    <input type="text" name="power" id="power"><br>
+
+                    <label for="weakness">Enter the weakness of the Hero Entered</label><br>
+                    <input type="text" name="weakness" id="weakness"><br>
+
+                    <label for="age">Enter age:</label><br>
+                    <input type="number" name="age" id="age"><br>
+
+                    <label for="squad">CHOOSE SQUAD</label><br>
+                    <input type = "text" list = "squad" name="squad" required>
+                    <datalist id = "squad">
+                        <option value = "Anti-sexism">
+                        <option value = "Computer-illiteracy">
+                        <option value = "Mouth-Ethics">
+                        <option value = "Anti-Hogging-bus-seats">
+                        <option value = "Anti-passive-aggressive">
+                    </datalist>
+
+                    <button type="submit" class="btn-info" >ADD HERO</button>
+                </form>
+            <div class="col-md-12" id="squads">
+                <div>
+
+
+                    {{#if squads}}
+                        <h3 class="text-center">THE SQUADS</h3>
+                        {{#each squads}}
+                            <div class="squadding">
+                                <i class="fab fa-old-republic" style="color:white; font-size: 35px;"></i>
+                                <h4>{{squadName}}</h4>
+                                <h5>Strength: {{strength}}</h5>
+                                <h5>Members : {{heroname}}</h5>
+
+                            </div><hr>
+                        {{/each}}
+
+
+                    {{/if}}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <h2>List of Heros</h2>
+            {{#if heros}}
+               {{#each heros}}
+                   <div class="heroshow">
+                       <h3><i class="fas fa-swords"></i>Hero Name: {{name}}</h3><hr>
+                       <h4>Hero Power: {{power}} :Rating: {{powerMagnitude}}</h4>
+                       <h4>Hero Weakness: {{weakness}}: Rating: {{weaknessMagnitude}}</h4>
+                       <h5>Age: {{age}}</h5>
+                       <h5>Squad: {{squadName}}</h5>
+                       <p><a href="/heros/{{id}}" style="color:red;">See More</a></p>
+                   </div>
+
+                {{/each}}
+                </p>
+            {{else}}
+                <p style="color: white;">There are no heros as YET!!!.</p>
+
+            {{/if}}
+
+        </div>
+
+
+    </div>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
