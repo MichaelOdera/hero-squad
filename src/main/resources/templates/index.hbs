@@ -59,13 +59,23 @@
     <div class="row">
 
         <div class="col-md-6" id="squads">
-            {{#if squads}}
-                <h3>THE SQUADS</h3>
-                {{#each squads}}
-                    <h4>Name of the squad: {{squadName}}</h4>
-                {{/each}}
-            {{/if}}
+            <div>
+                {{#if newSquad}}
+                    <p>Power: {{newSquad.strenth}}</p>
+                    <p>Member No: {{newSquad.size}}</p>
+                {{/if}}
 
+                {{#if squads}}
+                    <h3>THE SQUADS</h3>
+                    {{#each squads}}
+                        <h4>Name of the squad: {{squadName}}</h4>
+                        <h4>Power of Squad: {{strength}}</h4>
+
+                    {{/each}}
+
+
+                {{/if}}
+            </div>
 
         </div>
 

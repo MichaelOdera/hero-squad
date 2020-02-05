@@ -16,6 +16,7 @@ public class Hero {
     private int weaknessMagnitude;
     private int age;
     private int id;
+    private boolean insquad;
 
 
 
@@ -30,6 +31,7 @@ public class Hero {
         this.powerMagnitude = getPowerMagnitude();
         this.weaknessMagnitude = getWeaknessMagnitude();
         this.dayCreated = LocalDateTime.now();
+        this.insquad = checkInSquad();
         allheros.add(this);
         this.id = allheros.size();
 
@@ -38,6 +40,14 @@ public class Hero {
     //Find  a hero by a particular id
     public static Hero findById(int id) {
         return allheros.get(id-1);
+    }
+
+    public boolean checkInSquad(){
+        if(!squadName.isEmpty()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
@@ -108,7 +118,6 @@ public class Hero {
 
     //function to calculate magnitude of hero's property
     public int getPowerMagnitude(){
-
         return power.length();
     }
 

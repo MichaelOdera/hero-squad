@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static models.Squad.getSquadStrength;
 import static org.junit.Assert.*;
 
 public class SquadTest {
@@ -17,6 +16,8 @@ public class SquadTest {
 
     @After
     public void tearDown() throws Exception {
+        Squad.clearAllinstances();
+
     }
 
     @Test
@@ -24,6 +25,7 @@ public class SquadTest {
         Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
         Squad testSquad = new Squad(testHero);
         assertEquals(true, testSquad instanceof Squad);
+
     }
 
     @Test
@@ -62,6 +64,16 @@ public class SquadTest {
         Squad secondSquad = new Squad(secondHero);
         Squad testSquad = new Squad(testHero);
         assertEquals(2, Squad.getAllInstances().size());
+    }
+
+    @Test
+    public void checkIfReturnsTotalStrength_4(){
+        Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
+        Hero secondHero = new Hero("monty", 35, "huge", "footy", "cow");
+        Squad testSquad = new Squad(testHero);
+        Squad secondSquad = new Squad(secondHero);
+        assertEquals(2, Squad.getSquadStrength());
+
     }
 
 

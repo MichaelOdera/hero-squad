@@ -23,28 +23,26 @@ public class App{
         post("/heros/new/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
+            request.session().attribute("name", name);
+
             String power = request.queryParams("power");
+            request.session().attribute("power", power);
+
             String weakness = request.queryParams("weakness");
+            request.session().attribute("weakness", weakness);
+
             Integer age = Integer.parseInt(request.queryParams("age"));
+            request.session().attribute("age", age);
+
             String squadName = request.queryParams("squad");
+            request.session().attribute("squadName", squadName);
+
             Hero newHero = new Hero(name, age, power, weakness, squadName);
+            Squad newSquad = new Squad(newHero);
+
+            model.put("squadName", request.session().attribute("squadName"));
             model.put("newHero", newHero);
-            if(newHero.getSquadName().equals("Anti-Sexism")){
-                Squad aSexSquad = new Squad(newHero);
-                model.put("aSexSquad", aSexSquad);
-            }else if(newHero.getSquadName().equals("Computer-illiteracy")){
-                Squad compSquad = new Squad(newHero);
-                model.put("compSquad", compSquad);
-            }else if(newHero.getSquadName().equals("Mouth-Ethics")){
-                Squad ethicSquad = new Squad(newHero);
-                model.put("ethicSquad", ethicSquad);
-            }else if(newHero.getSquadName().equals("Anti-Hogging-bus-seats")){
-                Squad busSquad = new Squad(newHero);
-                model.put("busSquad", busSquad);
-            }else{
-                Squad passiveSquad = new Squad(newHero);
-                model.put("passiveSquad", passiveSquad);
-            }
+            model.put("newSquad", newSquad);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
