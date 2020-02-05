@@ -19,8 +19,6 @@ public class Hero {
     private boolean insquad;
 
 
-
-
     public Hero(String name, Integer age, String power, String weakness, String squadName){
         this.name = name;
         this.power = power;
@@ -49,7 +47,6 @@ public class Hero {
             return false;
         }
     }
-
 
     public LocalDateTime getDayCreated(){
         return dayCreated;
@@ -80,7 +77,6 @@ public class Hero {
         this.weakness = weakness;
     }
 
-
     public String getName() {
         return name;
     }
@@ -89,32 +85,25 @@ public class Hero {
         this.name = name;
     }
 
-
     //Create a getter for the power of the hero
     public String getPower() {
         return power;
     }
 
-
     //Create a setter to the power that is to be entered
     public void setPower(String power) {
         this.power = power;
     }
-
-
     //Create a function that get back all the instances of the heros that have been created
 
     public static ArrayList<Hero> getAllHeros() {
         return allheros;
     }
 
-
     //create a function to ensure that the list is never populated before an entry is done
-
     public Object populateAtFirst() {
         return this.populatefirst;
     }
-
 
     //function to calculate magnitude of hero's property
     public int getPowerMagnitude(){
