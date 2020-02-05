@@ -32,7 +32,7 @@ public class SquadTest {
     public void testIfGetsproperties(){
         Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
         Squad testSquad = new Squad(testHero);
-        assertEquals(testHero, testSquad.getHero());
+        assertEquals("thirty", testSquad.getHero());
     }
 
     @Test
