@@ -10,8 +10,6 @@ public class Squad {
     private int size;
     private String heroname;
 
-
-
     public Squad(Hero hero){
         this.hero = hero;
         this.strength = getPowerMagnitude();
@@ -37,7 +35,6 @@ public class Squad {
         this.hero = hero;
     }
 
-
     public String getHero() {
         return hero.getName();
 
@@ -50,8 +47,6 @@ public class Squad {
         this.instances = instances;
     }
 
-
-
     public int getStrength() {
         return strength;
     }
@@ -63,6 +58,5 @@ public class Squad {
     public String getSquadName() {
         return hero.getSquadName();
     }
-
 
 }
