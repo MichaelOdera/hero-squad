@@ -102,12 +102,19 @@ input[type=text]{
     color: #7E5333;
     background-image: url("https://i.pinimg.com/236x/17/69/c9/1769c9d548e4c4eee2eb950a537bf6b4.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     padding: 5%;
     height: 90%;
     text-align: center;
     display: flex;
     flex-direction: column;
 
+}
+
+#success h4{
+    color: white;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .nav{
@@ -141,6 +148,16 @@ input[type=text]{
 .spinners{
     display: flex;
     justify-content: space-between;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+
 }
 
 
