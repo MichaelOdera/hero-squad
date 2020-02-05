@@ -1,7 +1,7 @@
 {{#partial "content"}}
     <div class="edit">
     {{#if editHero}}
-            <h1>Edit this Post!</h1>
+            <h1>Edit this Hero!</h1>
         <form action="/heros/{{editHero.id}}/update" method="post">
             <label for="name">Edit name</label><br>
             <input id="name" name="name" type="text" value="{{editHero.name}}"><br>
