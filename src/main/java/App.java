@@ -24,23 +24,17 @@ public class App{
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             request.session().attribute("name", name);
-
             String power = request.queryParams("power");
             request.session().attribute("power", power);
-
             String weakness = request.queryParams("weakness");
             request.session().attribute("weakness", weakness);
-
             Integer age = Integer.parseInt(request.queryParams("age"));
             request.session().attribute("age", age);
-
             String squadName = request.queryParams("squad");
             request.session().attribute("squadName", squadName);
-
             Hero newHero = new Hero(name, age, power, weakness, squadName);
             Squad newSquad = new Squad(newHero);
             model.put("squadName", request.session().attribute("squadName"));
-
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -65,7 +59,6 @@ public class App{
         }, new HandlebarsTemplateEngine());
 
         //create a function to display edit form on request
-
         get("/heros/:id/update", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfHeroToEdit = Integer.parseInt(request.params("id"));
