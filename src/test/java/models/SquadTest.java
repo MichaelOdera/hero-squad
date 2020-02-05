@@ -35,18 +35,12 @@ public class SquadTest {
         assertEquals("thirty", testSquad.getHero());
     }
 
-    @Test
-    public void checkIfReturnsAge_23(){
-        Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
-        Squad testSquad = new Squad(testHero);
-        assertEquals(23, testSquad.getAge());
-    }
 
     @Test
     public void checkIfCapturesMagnitude_4(){
         Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
         Squad testSquad = new Squad(testHero);
-        assertEquals(4, testSquad.getPowerMagnitude());
+        assertEquals(9, testSquad.getPowerMagnitude());
 
     }
 
@@ -66,15 +60,7 @@ public class SquadTest {
         assertEquals(2, Squad.getAllInstances().size());
     }
 
-    @Test
-    public void checkIfReturnsTotalStrength_4(){
-        Hero testHero = new Hero("thirty", 23, "slim", "travel", "hurry");
-        Hero secondHero = new Hero("monty", 35, "huge", "footy", "cow");
-        Squad testSquad = new Squad(testHero);
-        Squad secondSquad = new Squad(secondHero);
-        assertEquals(2, Squad.getSquadStrength());
 
-    }
 
 
 }
