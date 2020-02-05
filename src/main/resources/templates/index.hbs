@@ -32,17 +32,16 @@
                 </form>
             <div class="col-md-12" id="squads">
                 <div>
-                    {{#if newSquad}}
-                        <p>Power: {{newSquad.strenth}}</p>
-                        <p>Member No: {{newSquad.size}}</p>
-                    {{/if}}
+
 
                     {{#if squads}}
-                        <h3>THE SQUADS</h3>
+                        <h3 class="text-center">THE SQUADS</h3>
                         {{#each squads}}
                             <div class="squadding">
-                                <h4>Name of the squad: {{squadName}}</h4>
-                                <h4>Strength: {{strength}}</h4>
+                                <i class="fab fa-old-republic" style="color:white; font-size: 35px;"></i>
+                                <h4>{{squadName}}</h4>
+                                <h5>Strength: {{strength}}</h5>
+                                <h5>Members : {{heroname}}</h5>
                                 {{#if newSquad}}
                                     <h4>Member: {{newSquad.getPowerMagnitude}}</h4>
                                 {{/if}}
