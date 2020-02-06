@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="models.HeroTest" time="0.034" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="models.HeroTest" time="0.036" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.6+10"/>
@@ -65,9 +65,9 @@
   <testcase classname="models.HeroTest" name="checkForAgeGetter" time="0.034"/>
   <testcase classname="models.HeroTest" name="checkForAnInstanceOfTheClassHero" time="0"/>
   <testcase classname="models.HeroTest" name="AllHerosAreCorrectlyReturned" time="0"/>
-  <testcase classname="models.HeroTest" name="checkIfHeroIsInstanceOfHeroIfAddedToArray" time="0"/>
+  <testcase classname="models.HeroTest" name="checkIfHeroIsInstanceOfHeroIfAddedToArray" time="0.001"/>
   <testcase classname="models.HeroTest" name="TheHeroSquadShouldNeverBePopulatedAtInitialization" time="0"/>
-  <testcase classname="models.HeroTest" name="getTimeWhenHeroWasCreated_instantiateWith_Today" time="0"/>
+  <testcase classname="models.HeroTest" name="getTimeWhenHeroWasCreated_instantiateWith_Today" time="0.001"/>
   <testcase classname="models.HeroTest" name="checkIfReturnsId" time="0"/>
   <testcase classname="models.HeroTest" name="check_IfReturnsTheLengthofWeaknessOrPower" time="0"/>
 </testsuite>

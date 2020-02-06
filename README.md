@@ -20,7 +20,7 @@ In case of any bugs or improvements, contact me through enmail:michogelira@gmail
 developed to heroku
 
 ## Code Beat Badge
-[![codebeat badge](https://codebeat.co/badges/9d44c817-1492-4723-b562-275b966e2351)](https://codebeat.co/projects/github-com-michaelodera-quotes-master)
+[![codebeat badge](https://codebeat.co/badges/9d44c817-1492-4723-b562-275b966e2351)](https://codebeat.co/projects/github-com-michaelodera-hero-squad-dev)
 
 
 ## Bugs Encountered
@@ -34,6 +34,7 @@ There were no major bugs to be encountered and the console would prove to be mos
 * Spark Framework
 * Heroku
 * Loaders
+* Maven
 
 
 ## Installation
